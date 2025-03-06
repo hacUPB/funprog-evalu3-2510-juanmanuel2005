@@ -23,3 +23,7 @@ En un lenguaje compilado, la máquina de destino traduce directamente el program
 3. [Lenguaje ensamblador](https://es.wikipedia.org/wiki/Lenguaje_ensamblador)
 4. [Compilador](https://www.ninjaone.com/es/it-hub/it-service-management/que-es-un-compilador/#:~:text=Un%20compilador%20es%20un%20tipo,(el%20lenguaje%20de%20destino).)
 5. [Diferencia entre lenguaje compilado y uno interpretado](https://www.freecodecamp.org/espanol/news/lenguajes-compilados-vs-interpretados/)
+
+##  Ejercicios Prácticos
+
+### 1. Visualizando cada etapa
