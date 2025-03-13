@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    float num1, num2;
+    float num1, num2, resultado;
     int opcion;
 
     // Mostrar el menú de opciones
@@ -19,26 +19,32 @@ int main() {
     printf("Ingresa el segundo número: ");
     scanf("%f", &num2);
 
-    // Realizar la operación según la opción seleccionada
-    if (opcion == 1) {
-        printf("El resultado de %.2f + %.2f es: %.2f\n", num1, num2, num1 + num2);
-    } 
-    else if (opcion == 2) {
-        printf("El resultado de %.2f - %.2f es: %.2f\n", num1, num2, num1 - num2);
+    // Usamos switch y case para manejar las operaciones
+    switch (opcion) {
+        case 1:  // Opción para sumar
+            resultado = num1 + num2;
+            break;
+        case 2:  // Opción para restar
+            resultado = num1 - num2;
+            break;
+        case 3:  // Opción para multiplicar
+            resultado = num1 * num2;
+            break;
+        case 4:  // Opción para dividir
+            if (num2 != 0) {
+                resultado = num1 / num2;
+            } else {
+                printf("Error: No se puede dividir entre 0.\n");
+                return 1;  // Salir del programa si hay un error
+            }
+            break;
+        default:  // Opción no válida
+            printf("Opción no válida. Por favor, elige una opción entre 1 y 4.\n");
+            return 1;  // Salir del programa si la opción no es válida
     }
-    else if (opcion == 3) {
-        printf("El resultado de %.2f * %.2f es: %.2f\n", num1, num2, num1 * num2);
-    }
-    else if (opcion == 4) {
-        if (num2 != 0) {
-            printf("El resultado de %.2f / %.2f es: %.2f\n", num1, num2, num1 / num2);
-        } else {
-            printf("Error: No se puede dividir entre 0.\n");
-        }
-    } 
-    else {
-        printf("Opción no válida. Por favor, elige una opción entre 1 y 4.\n");
-    }
+
+    // Imprimir el resultado de la operación
+    printf("El resultado es: %f\n", resultado);
 
     return 0;
 }
