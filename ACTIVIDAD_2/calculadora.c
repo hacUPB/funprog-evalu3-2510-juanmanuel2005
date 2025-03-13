@@ -16,16 +16,10 @@ int main() {
         printf("Ingresa el número de la opción que deseas: ");
         scanf("%d", &opcion);
 
-        // Si el usuario decide salir, terminamos el programa
-        if (opcion == 5) {
-            printf("Saliendo del programa...\n");
-            break;  // Sale del bucle y termina el programa
-        }
-
         // Espacio entre el menú y los números pedidos
         printf("\n");
 
-        // Pedir los dos números para realizar las operaciones
+        // Pedir los números siempre
         printf("Ingresa el primer número: ");
         scanf("%f", &num1);
         printf("Ingresa el segundo número: ");
@@ -34,21 +28,25 @@ int main() {
         // Espacio entre los números pedidos y el resultado
         printf("\n");
 
-        // Usamos switch y case para manejar las operaciones
+        // Usamos un solo switch para manejar las operaciones
         switch (opcion) {
             case 1:  // Opción para sumar
                 resultado = num1 + num2;
                 printf("El resultado es: %f\n", resultado);
                 break;
+
             case 2:  // Opción para restar
                 resultado = num1 - num2;
                 printf("El resultado es: %f\n", resultado);
                 break;
+
             case 3:  // Opción para multiplicar
                 resultado = num1 * num2;
                 printf("El resultado es: %f\n", resultado);
                 break;
+
             case 4:  // Opción para dividir
+                // Usamos un if para manejar la división por cero
                 if (num2 != 0) {
                     resultado = num1 / num2;
                     printf("El resultado es: %f\n", resultado);
@@ -56,6 +54,11 @@ int main() {
                     printf("Error: No se puede dividir entre 0.\n");
                 }
                 break;
+
+            case 5:  // Opción para salir
+                printf("Saliendo del programa...\n");
+                break;
+
             default:  // Opción no válida
                 printf("Opción no válida. Por favor, elige una opción entre 1 y 5.\n");
                 break;
