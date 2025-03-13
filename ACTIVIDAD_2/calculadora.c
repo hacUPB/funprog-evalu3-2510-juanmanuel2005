@@ -6,7 +6,7 @@ int main() {
 
     // Bucle do-while que repite el menú hasta que el usuario elija salir
     do {
-        // Mostrar el menú de opciones
+        // Mostrar el menú de opciones con un salto de línea antes del menú
         printf("\nSelecciona una operacion:\n");
         printf("1. Sumar\n");
         printf("2. Restar\n");
@@ -22,11 +22,17 @@ int main() {
             break;  // Sale del bucle y termina el programa
         }
 
+        // Espacio entre el menú y los números pedidos
+        printf("\n");
+
         // Pedir los dos números para realizar las operaciones
         printf("Ingresa el primer número: ");
         scanf("%f", &num1);
         printf("Ingresa el segundo número: ");
         scanf("%f", &num2);
+
+        // Espacio entre los números pedidos y el resultado
+        printf("\n");
 
         // Usamos switch y case para manejar las operaciones
         switch (opcion) {
