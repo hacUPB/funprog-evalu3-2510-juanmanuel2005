@@ -16,17 +16,18 @@ int main() {
         printf("Ingresa el número de la opción que deseas: ");
         scanf("%d", &opcion);
 
-        // Espacio entre el menú y los números pedidos
-        printf("\n");
+        // Si la opción no es 5, pedimos los números
+        if (opcion != 5) {
+            // Espacio entre el menú y los números pedidos
+            printf("\n");
+            printf("Ingresa el primer número: ");
+            scanf("%f", &num1);
+            printf("Ingresa el segundo número: ");
+            scanf("%f", &num2);
 
-        // Pedir los números siempre
-        printf("Ingresa el primer número: ");
-        scanf("%f", &num1);
-        printf("Ingresa el segundo número: ");
-        scanf("%f", &num2);
-
-        // Espacio entre los números pedidos y el resultado
-        printf("\n");
+            // Espacio entre los números pedidos y el resultado
+            printf("\n");
+        }
 
         // Usamos un solo switch para manejar las operaciones
         switch (opcion) {
@@ -46,12 +47,11 @@ int main() {
                 break;
 
             case 4:  // Opción para dividir
-                // Usamos un if para manejar la división por cero
-                if (num2 != 0) {
+                if (num2 == 0) {  // Verificamos si el divisor es 0
+                    printf("Error: No se puede dividir entre 0.\n");
+                } else {
                     resultado = num1 / num2;
                     printf("El resultado es: %f\n", resultado);
-                } else {
-                    printf("Error: No se puede dividir entre 0.\n");
                 }
                 break;
 
