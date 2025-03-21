@@ -82,7 +82,7 @@ Donde N es el numero de leds en paralelo.
 
 2. Después de realizar los cálculos, el programa debe mostrar al usuario los siguientes resultados:  
     
-- Valor de la resistencia ($*R*$).  
-- Potencia de la resistencia ($*P_{R}*$).  
-- Potencia total del circuito ($*P_{Total}*$).  
-- Corriente total suministrada por la fuente ($*I_{Total}*$).  
+- Valor de la resistencia (R).  
+- Potencia de la resistencia (P_R).  
+- Potencia total del circuito (P_Total).  
+- Corriente total suministrada por la fuente (Itotal).  
