@@ -14,9 +14,9 @@ Para este reto se pide ralizar una calculadora de ingenieria en donde se usa un 
  
  2. Dependiendo de la opcion escogida este pide loS datos necesarios.  
 
-- V = I * R  
-- I = V / R  
-- R = V / I  
+- ```V = I * R  ```
+- ```I = V/R ``` 
+- ```R = V/I ``` 
 
 - Si se quiere calcular V se necesita pedir I y R  
 - Si se quiere calcular I se necesita pedir V y R  
@@ -27,9 +27,9 @@ Para este reto se pide ralizar una calculadora de ingenieria en donde se usa un 
 
 2. Entrada de Datos: el programa debe solicitar al usuario los valores necesarios para calcular el parámetro seleccionado.  
 
-- Potencia aparente: S = V * I    
-- Potencia activa: P = S * cos(θ) = V * I * cos(θ)  
-- Factor de potencia: FP = cos(θ) = P / S  
+- Potencia aparente: ```S = V * I ```   
+- Potencia activa: ```P = S * cos(θ) = V * I * cos(θ)```  
+- Factor de potencia: ```FP = cos(θ) = P/S```  
 
 - Si se quiere calcular P se necesita pedir V, I y el FP o el angulo θ   
 - Si se quiere calcular S se necesita pedir V y I    
@@ -40,7 +40,17 @@ Para este reto se pide ralizar una calculadora de ingenieria en donde se usa un 
 
 2. Para los tres primeros, las constantes de Coeficiente Temperatura y la Resistividad a 20ºC, deben estar guardadas en memoria, para otros conductores, se debe solicitar al usuario.  
 
-3. 
+3. ```R_T = R_0 * (1 + α * (T - T_0))```  
+
+Donde:  
+
+- R_T = Resistencia a la temperatura  (Ω)  
+- R_0 = Resistencia a la temperatura de referencia  (generalmente 20°C) (Ω)   
+- α = Coeficiente de temperatura de la resistencia ()  
+- T = Temperatura final (°C)  
+- T_0 = Temperatura inicial (°C)  
+
+4. Después de realizar el cálculo, el programa debe mostrar la resistencia del conductor al usuario.   
 
 ### Resistencia para un LED
 1. Después de seleccionar la opción ```Calcular Valor de la Resistencia para un LED```, el programa debe solicitar al usuario los siguientes datos:
@@ -50,6 +60,25 @@ Para este reto se pide ralizar una calculadora de ingenieria en donde se usa un 
 - Tipo de conexión de los ledes: serie o paralelo.  
 - Tensión nominal del LED en voltios ($V_f$).  
 - Corriente nominal del LED en amperios ($I_f$).  
+
+- Si el led esta en serie se calcula con esto.  
+
+```R = (V - (N * V_f)) / I_f```  
+
+Donde:
+
+R = Resistencia necesaria (Ω)  
+V = Tensión de la fuente (V)  
+N = Número de LEDs en serie  
+V_f = Tensión nominal de cada LED (V)  
+I_f = Corriente nominal del LED (A)   
+
+- Si el led esta en paralelo.   
+
+Si cada led tiene una resistencia se calcula asi: ```R = (V - V_f) / I_f ```  
+Si se usa una sola resitencia para todos los leds se usa esta: ```R = (V - V_f) / (N * I_f)```  
+
+Donde N es el numero de leds en paralelo.  
 
 2. Después de realizar los cálculos, el programa debe mostrar al usuario los siguientes resultados:  
     
