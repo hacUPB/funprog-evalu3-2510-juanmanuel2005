@@ -4,20 +4,20 @@ void Promedio(float, float, float, float *);
 
 int main(int argc, char const *argv[])
 {
-    float var1, var2, var3, promedio; 
+    float num1, num2, num3, promedio; 
     
     // Solicitar los tres números
     printf("Ingrese el primer numero: \n");
-    scanf("%f", &var1);
+    scanf("%f", &num1);
     
     printf("Ingrese el segundo numero: \n");
-    scanf("%f", &var2);
+    scanf("%f", &num2);
     
     printf("Ingrese el tercer numero: \n");
-    scanf("%f", &var3);
+    scanf("%f", &num3);
     
     // Llamar a la función Promedio
-    Promedio(var1, var2, var3, &promedio); 
+    Promedio(num1, num2, num3, &promedio); 
     
     // Imprimir el promedio calculado
     printf("Promedio = %f\n", promedio); 
