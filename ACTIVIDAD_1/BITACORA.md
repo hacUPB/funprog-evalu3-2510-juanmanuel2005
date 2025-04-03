@@ -92,17 +92,22 @@ gcc -O2 hola.o -o hola_optimizado
 
 ## Preguntas de Control de Comprensión
  ### 1. ¿Cuál es la función principal del preprocesador en C?
- **R/**  
+ **R/**   
+Se encarga de procesar directivas como ``#include`` y macros antes de compilar el código.  
 
  ### 2. ¿Por qué se dice que el código objeto (.o) no es directamente ejecutable?
- **R/**  
+ **R/**   
+ Porque aún no tiene las bibliotecas y funciones externas necesarias para ejecutarse.  
  
  ### 3. ¿Qué diferencia existe entre el código ensamblador (.s) y el código objeto (.o)?
-  **R/**  
+  **R/**    
+  El código ensamblador (.s) es una versión en lenguaje ensamblador del programa, mientras que el código objeto (.o) es binario y no ejecutable hasta que se enlace.  
  
  ### 4. ¿Para qué sirve la opción S en GCC?
-  **R/**  
+  **R/**   
+  Genera el código ensamblador (.s) en lugar de compilar directamente a código objeto.  
  
  ### 5. ¿Qué sucede si omitimos la etapa de linker?
- **R/**  
+ **R/**   
+ El programa no podrá ejecutarse porque no se unirán las funciones y bibliotecas necesarias.  
  
