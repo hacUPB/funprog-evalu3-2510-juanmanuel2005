@@ -33,9 +33,6 @@ int main() {
 }
 ```  
 
-# ADJUNTAR IMAGENES DESPUES DE REEMPLAZAR OPERADORES
-  
-
 ## Ejemplo de ``switch``  
 Imagina que tienes un sistema que selecciona el modo de operación de una fuente de alimentación. Dependiendo del modo, ajustas la salida:  
 
@@ -107,12 +104,52 @@ int main() {
 ## Ejercicio con ``switch``  
 Crea un programa que presente un menú similar al ejemplo anterior, pero que muestre:  
 
-- **Opción 1**: "Encender LED"  
-- **Opción 2**: "Apagar LED"  
-- **Opción 3**: "Mostrar estado del LED"  
-- **Opción 4**: Salir   
+- **Opción 1**: "Encender LED"   
+- **Opción 2**: "Apagar LED"   
+- **Opción 3**: "Mostrar estado del LED"   
+- **Opción 4**: Salir     
 
-# HACER EL EJERCICIO
+```  
+#include <stdio.h>
+
+int main() {
+    int opcion;
+    int ledEncendido = 0; // 0 = apagado, 1 = encendido
+
+    printf("=== MENU CONTROL DE LED ===\n");
+    printf("1. Encender LED\n");
+    printf("2. Apagar LED\n");
+    printf("3. Mostrar estado del LED\n");
+    printf("4. Salir\n");
+    printf("Selecciona una opción: ");
+    scanf("%d", &opcion);
+
+    switch(opcion) {
+        case 1:
+            ledEncendido = 1;
+            printf("LED encendido.\n");
+            break;
+        case 2:
+            ledEncendido = 0;
+            printf("LED apagado.\n");
+            break;
+        case 3:
+            if (ledEncendido)
+                printf("El LED está ENCENDIDO.\n");
+            else
+                printf("El LED está APAGADO.\n");
+            break;
+        case 4:
+            printf("Saliendo del programa...\n");
+            break;
+        default:
+            printf("Opción inválida.\n");
+            break;
+    }
+
+    return 0;
+}
+```  
 
 ## Ejercicio de calculadora
 Se creo un codigo con un menu que da 5 opciones para realizar las funciones basicas dando las siguientes opciones.  
@@ -124,6 +161,7 @@ Se creo un codigo con un menu que da 5 opciones para realizar las funciones basi
 5. Salir.  
 
 El codigo es este:  
+
 ```
 #include <stdio.h>
 
@@ -199,14 +237,60 @@ int main() {
 ## Ejercicios propuestos
 
 1. Condicional doble: Escribe un programa que pregunte la edad y te indique si eres mayor o menor de edad.  
-2. ``if-else if-else``: Crea un programa que evalúe la calificación de un alumno (0-5) e imprima: "Insuficiente", "Aceptable", "Sobresaliente", etc.   
+         
+**R//**   
+``` 
+#include <stdio.h>
+
+int main() {
+    int edad;
+
+    printf("Ingresa tu edad: ");
+    scanf("%d", &edad);
+
+    if (edad >= 18) {
+        printf("Eres mayor de edad.\n");
+    } else {
+        printf("Eres menor de edad.\n");
+    }
+
+    return 0;
+}
+```   
+   
+2. ``if-else if-else``: Crea un programa que evalúe la calificación de un alumno (0-5) e imprima: "Insuficiente", "Aceptable", "Sobresaliente", etc.     
+      
+**R//**     
+```    
+#include <stdio.h>
+
+int main() {
+    float calificacion;
+
+    printf("Ingresa la calificación (0 a 5): ");
+    scanf("%f", &calificacion);
+
+    if (calificacion < 0) {
+        printf("La calificación no puede ser negativa.\n");
+    } 
+    else if (calificacion > 5) {
+        printf("La calificación no puede ser mayor a 5.\n");
+    } 
+    else if (calificacion < 3.0) {
+        printf("Insuficiente.\n");
+    } 
+    else if (calificacion < 4.0) {
+        printf("Aceptable.\n");
+    } 
+    else {
+        printf("Sobresaliente.\n");
+    }
+
+    return 0;
+}
+```  
+
 3. Menú repetitivo: Implementa un menú con al menos cuatro opciones y un bucle que permita seleccionar repetidamente cualquier opción hasta que se elija "Salir".   
 
-# REALIZAR LOS EJERCICIOS
-
-
-
-
-
-
-
+**R//**   
+Ejercicio de calculadora puesto anteriormente donde se encontraban las cuatro opciones basicas: Sumar, restar, multiplicar y dividir.   
