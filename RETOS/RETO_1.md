@@ -86,3 +86,6 @@ Donde N es el numero de leds en paralelo.
 - Potencia de la resistencia (P_R).  
 - Potencia total del circuito (P_Total).  
 - Corriente total suministrada por la fuente (Itotal).  
+
+### Sustentacion del reto:
+[Sustentacion](https://upbeduco-my.sharepoint.com/:v:/g/personal/juanm_gomezl_upb_edu_co/EeM1Z3B-9A9Ao9Rb2tYW2HEBTrlOBCTnL1xl0raYUtNycQ?e=Uyq45R&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
